@@ -1,0 +1,26 @@
+<div>
+  <button
+    (click)="onBtExport()"
+    style="margin-bottom: 5px; font-weight: bold"
+  >
+    Export to Excel
+  </button>
+</div>
+<div class="row" style="margin: 50px;">
+    <div class="container">
+      <ag-grid-angular
+        class="ag-theme-quartz"
+        style="height: 650px; width:100%;" 
+        [rowData]="userList"
+        [columnDefs]="colDefs"
+        [defaultColDef]="defaultColDef"
+        (gridReady)="onGridReady($event)"
+        [rowSelection]="rowSelection"
+        [pagination]="true"
+        [paginationPageSizeSelector]="[]"
+      >
+      </ag-grid-angular>
+      <br>
+      br
+    </div>
+  </div>

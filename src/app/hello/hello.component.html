@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>API Call Example</h1>
+  <label for="type">Select Type:</label>
+  <select [(ngModel)]="selectedType" id="type">
+    <option value="Cat">Cat</option>
+    <option value="Rat">Rat</option>
+  </select>
+  <!-- <div class="result" *ngIf="result">
+    <pre>{{ result | json }}</pre>
+  </div> -->
+  <div>
+    <button (click)="enterData()">Enter</button>
+    <p *ngIf="result">{{ result }}</p>
+  </div>
+</div>
