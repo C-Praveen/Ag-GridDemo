@@ -12,6 +12,7 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
 import { HelloComponent } from './hello/hello.component';
 import { FormsModule } from '@angular/forms';
 import { NewComponent } from './new/new.component';
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
 
 if ((window as any).ENABLE_PROD_MODE) {
   enableProdMode();
@@ -24,6 +25,7 @@ if ((window as any).ENABLE_PROD_MODE) {
     AgGridUseComponent,
     HelloComponent,
     NewComponent,
+    EmployeeFormComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit()" class="employee-form">
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input type="text" [(ngModel)]="employee.firstName" name="firstName" id="firstName" placeholder="First Name" required>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input type="text" [(ngModel)]="employee.lastName" name="lastName" id="lastName" placeholder="Last Name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" [(ngModel)]="employee.email" name="email" id="email" placeholder="Email" required>
+  </div>
+  <div class="form-group">
+    <label for="position">Position</label>
+    <select [(ngModel)]="employee.position" name="position" id="position" required>
+      <option *ngFor="let pos of positions" [value]="pos">{{ pos }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="salary">Salary</label>
+    <input type="number" [(ngModel)]="employee.salary" name="salary" id="salary" placeholder="Salary" required>
+  </div>
+  <button type="submit" class="submit-button">Submit</button>
+</form>

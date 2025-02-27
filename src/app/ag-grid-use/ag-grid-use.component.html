@@ -1,11 +1,11 @@
-<div>
-  <button
-    (click)="onBtExport()"
-    style="margin-bottom: 5px; font-weight: bold"
-  >
-    Export to Excel
-  </button>
-</div>
+<nav class="navbar bg-body-secondary">
+  <form class="container-fluid justify-content-end">
+    <button class="btn btn-danger me-2" type="button" (click)="deleteSelectedRows()">Delete Selected Row</button>
+    <button class="btn btn-danger me-2" type="button" (click)="deleteAllItems()">Delete All Data</button>
+    <button class="btn btn btn-success" type="button" (click)="onBtExport()">Excel Export</button>
+  </form>
+</nav>
+
 <div class="row" style="margin: 50px;">
     <div class="container">
       <ag-grid-angular
@@ -18,9 +18,13 @@
         [rowSelection]="rowSelection"
         [pagination]="true"
         [paginationPageSizeSelector]="[]"
+        (cellValueChanged)="onCellValueChanged($event)"
+        rowSelection="multiple"
       >
       </ag-grid-angular>
       <br>
-      br
+    </div>
+    <div class="div">
+      <app-employee-form (employeeAdded)="getUser()"></app-employee-form>
     </div>
   </div>
